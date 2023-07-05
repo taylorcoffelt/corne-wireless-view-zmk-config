@@ -9,8 +9,17 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    combos {
+        compatible = "zmk,combos";
+
+        new_combo {
+            bindings = <&mo 3>;
+            key-positions = <37 40>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
@@ -68,4 +77,5 @@
                         status = "reserved";
                 };
         };
+    };
 };
