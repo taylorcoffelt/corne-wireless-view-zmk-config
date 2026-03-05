@@ -1,5 +1,5 @@
 DOCKER_IMAGE := zmkfirmware/zmk-dev-arm:stable
-BOARD := nice_nano_v2
+BOARD := nice_nano//zmk
 DOCKER_RUN := docker run --rm -v "$(shell pwd):/config:ro" -v "$(shell pwd)/output:/output" $(DOCKER_IMAGE)
 WEST_SETUP := mkdir -p /workspace && cp -r /config/config /workspace/config && \
 	west init -l /workspace/config && \
